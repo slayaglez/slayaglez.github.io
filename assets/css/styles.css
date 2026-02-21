@@ -163,9 +163,11 @@ body {
 
 .muted { color: var(--muted); font-size: 14px; }
 
+/*
 .border-blue   { border-color: rgba(37, 99, 235, 0.45); }
 .border-violet { border-color: rgba(139, 92, 246, 0.45); }
-.border-emerald{ border-color: rgba(16, 185, 129, 0.45); }
+.border-emerald{ border-color: rgba(16, 185, 129, 0.45); } 
+*/
 
 .toolbar {
   display: flex;
