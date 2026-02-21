@@ -57,7 +57,7 @@ body {
 }
 
 .section {
-  margin-top: 22px;
+  margin-top: 12px;
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -66,8 +66,14 @@ body {
 
 .grid2 {
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 18px
+  grid-template-columns: 2fr 1fr;
+  gap: 28px
+}
+
+.experience {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1vw;
 }
 
 @media (max-width: 900px) {
@@ -96,7 +102,8 @@ body {
 }
 
 .profile .bio {
-  padding: 16px
+  padding: 16px;
+  padding-top: 40px;
 }
 
 .pillrow {
