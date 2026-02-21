@@ -1,4 +1,3 @@
-/* ─── Variables ─────────────────────────────────────────────── */
 :root {
   --bgsolid:  #13151f;
   --bg:       radial-gradient(circle, rgb(26,26,26) 0%, rgb(14,19,27) 50%, rgba(10,10,10,1) 100%);
@@ -12,16 +11,13 @@
   --radius:   18px;
 }
 
-/* ─── Reset ─────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
-/* ─── Fuente ─────────────────────────────────────────────────── */
 @font-face {
   font-family: 'Aileron';
   src: url(../fonts/Aileron/Aileron-SemiBold.otf);
 }
 
-/* ─── Base ───────────────────────────────────────────────────── */
 body {
   margin: 0;
   font-family: 'Aileron', sans-serif;
@@ -36,7 +32,6 @@ body {
   padding: 28px 18px 60px;
 }
 
-/* ─── Topbar ─────────────────────────────────────────────────── */
 .topbar {
   display: flex;
   align-items: center;
@@ -61,7 +56,6 @@ body {
   font-size: clamp(13px, 2vw, 18px);
 }
 
-/* ─── Nav Social ─────────────────────────────────────────────── */
 #social {
   display: flex;
   gap: 10px;
@@ -69,14 +63,12 @@ body {
   flex-shrink: 0;
 }
 
-/* El botón hamburguesa siempre oculto en escritorio */
 #social .icon {
   display: none;
   font-size: 22px;
   padding: 8px 12px;
 }
 
-/* ─── Secciones ──────────────────────────────────────────────── */
 .section {
   margin-top: 12px;
   padding: 22px;
@@ -90,7 +82,6 @@ body {
   font-size: clamp(18px, 3vw, 24px);
 }
 
-/* ─── Grid Sobre mí ──────────────────────────────────────────── */
 .grid2 {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -101,7 +92,6 @@ body {
   padding: 1vw 2vw;
 }
 
-/* ─── Perfil ─────────────────────────────────────────────────── */
 .profile {
   display: flex;
   gap: 0;
@@ -127,7 +117,6 @@ body {
   justify-content: center;
 }
 
-/* ─── Pills ──────────────────────────────────────────────────── */
 .pillrow {
   display: flex;
   flex-wrap: wrap;
@@ -150,7 +139,6 @@ body {
   color: #380b0b;
 }
 
-/* ─── Cards ──────────────────────────────────────────────────── */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -175,12 +163,10 @@ body {
 
 .muted { color: var(--muted); font-size: 14px; }
 
-/* ─── Colores de borde de cards ──────────────────────────────── */
 .border-blue   { border-color: rgba(37, 99, 235, 0.45); }
 .border-violet { border-color: rgba(139, 92, 246, 0.45); }
 .border-emerald{ border-color: rgba(16, 185, 129, 0.45); }
 
-/* ─── Toolbar ────────────────────────────────────────────────── */
 .toolbar {
   display: flex;
   gap: 10px;
@@ -214,7 +200,6 @@ body {
   cursor: pointer;
 }
 
-/* ─── Botones ────────────────────────────────────────────────── */
 .btn {
   padding: 10px 14px;
   border-radius: 12px;
@@ -235,7 +220,6 @@ body {
 #email:hover         { border-color: #eb3c25; }
 .btn.active          { border-color: #93c5fd; background: #1e2a3a; }
 
-/* ─── Repo meta ──────────────────────────────────────────────── */
 .repoMeta {
   display: flex;
   gap: 10px;
@@ -246,18 +230,13 @@ body {
   margin-top: auto;
 }
 
-/* ══════════════════════════════════════════════════════════════
-   RESPONSIVE
-══════════════════════════════════════════════════════════════ */
-
-/* ─── Tablet (≤ 950px) ───────────────────────────────────────── */
+/** RESPONSIVE **/
 @media (max-width: 950px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* ─── Tablet pequeña (≤ 768px) ──────────────────────────────── */
 @media (max-width: 768px) {
   .topbar {
     flex-direction: column;
@@ -265,7 +244,6 @@ body {
     gap: 14px;
   }
 
-  /* El nav ocupa todo el ancho, centrado */
   #social {
     width: 100%;
     justify-content: flex-start;
@@ -292,7 +270,6 @@ body {
   }
 }
 
-/* ─── Móvil (≤ 600px) ────────────────────────────────────────── */
 @media (max-width: 600px) {
   .container {
     padding: 14px 12px 40px;
@@ -302,19 +279,15 @@ body {
     padding: 16px;
   }
 
-  /* --- Menú hamburguesa --- */
-
-  /* Ocultar los botones de red social, mostrar hamburguesa */
   #social a:not(.icon) {
     display: none;
   }
 
   #social .icon {
     display: block;
-    margin-left: auto; /* empuja el ícono a la derecha */
+    margin-left: auto;
   }
 
-  /* Menú desplegado: clase "responsive" añadida por JS */
   #social.responsive {
     flex-direction: column;
     align-items: flex-start;
@@ -333,18 +306,15 @@ body {
   }
 
   #social.responsive .icon {
-    /* El ícono queda al final visualmente, lo reordenamos */
     order: -1;
     margin-left: auto;
     width: auto;
   }
 
-  /* Cards a una columna */
   .cards {
     grid-template-columns: 1fr;
   }
 
-  /* Toolbar: input y select a ancho completo */
   .toolbar {
     flex-direction: column;
     align-items: stretch;
