@@ -16,13 +16,13 @@
 }
 
 @font-face {
-  font-family: 'Aileron-Bold';
-  src: url(/assets/fonts/Aileron/Aileron.otf);
+  font-family: 'Aileron';
+  src: url(/assets/fonts/Aileron/Aileron-SemiBold.otf);
 }
 
 body {
   margin: 0;
-  font-family: Aileron-Bold,ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  font-family: 'Aileron';
   background: var(--bg);
   color: var(--text);
 }
