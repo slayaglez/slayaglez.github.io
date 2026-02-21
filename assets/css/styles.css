@@ -209,6 +209,22 @@ body {
   color: white;
 }
 
+.btn:hover {
+  background: #242424;
+}
+
+#linkedin:hover {
+  border:2px solid #2563eb
+}
+
+#github:hover {
+  border:2px solid #b4b4b4
+}
+
+#email:hover {
+  border:2px solid #eb3c25
+}
+
 .btn.active {
   border-color: #93c5fd;
   background: #414141;
