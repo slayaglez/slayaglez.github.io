@@ -69,9 +69,9 @@
     <div class="toolbar">
       <input id="q" class="input" placeholder="Buscar repositorios..." />
       <select id="sort" class="select">
-        <option value="updated">Ordenar: actividad reciente</option>
-        <option value="stars">Ordenar: estrellas</option>
-        <option value="name">Ordenar: nombre</option>
+        <option value="updated">Actividad reciente</option>
+        <option value="stars">Más estrellas</option>
+        <option value="name">A-Z</option>
       </select>
       <button class="btn active" data-topic="all">Todos</button>
       <button class="btn" data-topic="showcase">showcase</button>
@@ -126,7 +126,7 @@
           <h3>${r.name}</h3>
           <div class="muted">${r.description || "Sin descripción (añádela en GitHub 😉)"}</div>
           <div class="pillrow">
-            <span class="pill featured">Featured</span>
+            <span class="pill featured">Destacado</span>
             ${topics}
           </div>
           <div class="repoMeta">
