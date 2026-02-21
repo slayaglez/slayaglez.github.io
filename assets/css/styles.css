@@ -1,61 +1,82 @@
+/* ─── Variables ─────────────────────────────────────────────── */
 :root {
-  --bgsolid: #13151f;
-  --bg: radial-gradient(circle, rgb(26, 26, 26) 0%, rgb(14, 19, 27) 50%, rgba(10, 10, 10, 1) 100%);
-  --text: #ffffff;
-  --muted: #cacaca;
-  --card: #303035;
-  --line: #414141;
-  --brand: #2563eb;
-  --brand2: #8b5cf6;
-  --shadow: 0 16px 50px rgba(122, 122, 122, 0.048);
-  --radius: 18px;
+  --bgsolid:  #13151f;
+  --bg:       radial-gradient(circle, rgb(26,26,26) 0%, rgb(14,19,27) 50%, rgba(10,10,10,1) 100%);
+  --text:     #ffffff;
+  --muted:    #7a7a8a;
+  --card:     #1c1e28;
+  --line:     #2e2e3a;
+  --brand:    #2563eb;
+  --brand2:   #8b5cf6;
+  --shadow:   0 16px 50px rgba(0,0,0,0.25);
+  --radius:   18px;
 }
 
-* {
-  box-sizing: border-box
-}
+/* ─── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
 
+/* ─── Fuente ─────────────────────────────────────────────────── */
 @font-face {
   font-family: 'Aileron';
   src: url(../fonts/Aileron/Aileron-SemiBold.otf);
 }
 
+/* ─── Base ───────────────────────────────────────────────────── */
 body {
   margin: 0;
-  font-family: 'Aileron';
+  font-family: 'Aileron', sans-serif;
   background: var(--bg);
   color: var(--text);
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 70vw;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 28px 18px 60px
+  padding: 28px 18px 60px;
 }
 
+/* ─── Topbar ─────────────────────────────────────────────────── */
 .topbar {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  position: relative;
 }
 
 .title {
-  font-size: 44px;
+  font-size: clamp(26px, 5vw, 44px);
   line-height: 1.05;
-  margin: 0
+  margin: 0;
 }
 
 .subtitle {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   color: var(--muted);
-  font-size: 18px
+  font-size: clamp(13px, 2vw, 18px);
 }
 
+/* ─── Nav Social ─────────────────────────────────────────────── */
+#social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* El botón hamburguesa siempre oculto en escritorio */
+#social .icon {
+  display: none;
+  font-size: 22px;
+  padding: 8px 12px;
+}
+
+/* ─── Secciones ──────────────────────────────────────────────── */
 .section {
   margin-top: 12px;
   padding: 22px;
@@ -64,165 +85,279 @@ body {
   background: var(--bgsolid);
 }
 
+.section h2 {
+  margin: 0 0 18px;
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+/* ─── Grid Sobre mí ──────────────────────────────────────────── */
 .grid2 {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 28px
+  gap: 28px;
 }
 
 .experience {
-  padding-left: 2vw;
-  padding-right: 2vw;
-  padding-top: 1vw;
+  padding: 1vw 2vw;
 }
 
-@media (max-width: 900px) {
-  .grid2 {
-    grid-template-columns: 1fr
-  }
-
-  .title {
-    font-size: 36px
-  }
-}
-
+/* ─── Perfil ─────────────────────────────────────────────────── */
 .profile {
   display: flex;
-  gap: 18px;
+  gap: 0;
   align-items: stretch;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #444444;
+  border: 1px solid #444;
 }
 
 .profile img {
   height: 50vh;
+  max-height: 340px;
+  width: auto;
   object-fit: cover;
-  display: block
+  display: block;
+  flex-shrink: 0;
 }
 
 .profile .bio {
-  padding: 16px;
-  padding-top: 40px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+/* ─── Pills ──────────────────────────────────────────────────── */
 .pillrow {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 .pill {
-  padding: 6px 10px;
+  padding: 5px 10px;
   border-radius: 999px;
   font-size: 12px;
   border: 2px solid var(--line);
-  background: #414141;
+  background: #2a2a35;
   color: #cacaca;
 }
 
 .pill.featured {
   border-color: #973636;
   background: #ff7676;
-  color: #380b0b
+  color: #380b0b;
 }
 
+/* ─── Cards ──────────────────────────────────────────────────── */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px
-}
-
-@media (max-width: 950px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr)
-  }
-}
-
-@media (max-width: 620px) {
-  .cards {
-    grid-template-columns: 1fr
-  }
+  gap: 14px;
 }
 
 .card {
   background: var(--card);
   border-radius: 16px;
   padding: 14px;
-  border: 2px solid var(--line);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.329);
+  border: 2px solid rgba(255, 30, 30, 0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border-color: #ff1e1e8a;
 }
 
-.muted {
-  color: var(--muted)
+.card h3 {
+  margin: 0;
+  font-size: 15px;
 }
 
+.muted { color: var(--muted); font-size: 14px; }
+
+/* ─── Colores de borde de cards ──────────────────────────────── */
+.border-blue   { border-color: rgba(37, 99, 235, 0.45); }
+.border-violet { border-color: rgba(139, 92, 246, 0.45); }
+.border-emerald{ border-color: rgba(16, 185, 129, 0.45); }
+
+/* ─── Toolbar ────────────────────────────────────────────────── */
 .toolbar {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 8px
+  margin-top: 8px;
 }
 
 .input {
   flex: 1;
-  min-width: 220px;
+  min-width: 180px;
   padding: 10px 12px;
   border-radius: 12px;
-  border: 2px solid var(--line)
+  border: 2px solid var(--line);
+  background: #1e2030;
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
 }
+
+.input:focus { outline: none; border-color: var(--brand); }
 
 .select {
   padding: 10px 12px;
   border-radius: 12px;
   border: 2px solid var(--line);
-  background: #414141;
+  background: #2a2a35;
   color: white;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
 }
 
+/* ─── Botones ────────────────────────────────────────────────── */
 .btn {
-  padding: 10px 12px;
+  padding: 10px 14px;
   border-radius: 12px;
   border: 2px solid var(--line);
-  background: #414141;
+  background: #2a2a35;
   cursor: pointer;
   text-decoration: none;
   color: white;
+  font-family: inherit;
+  font-size: 14px;
+  transition: background 0.2s, border-color 0.2s;
+  white-space: nowrap;
 }
 
-.btn:hover {
-  background: #242424;
-}
+.btn:hover           { background: #1a1a25; }
+#linkedin:hover      { border-color: #2563eb; }
+#github:hover        { border-color: #b4b4b4; }
+#email:hover         { border-color: #eb3c25; }
+.btn.active          { border-color: #93c5fd; background: #1e2a3a; }
 
-#linkedin:hover {
-  border:2px solid #2563eb
-}
-
-#github:hover {
-  border:2px solid #481f94
-}
-
-#email:hover {
-  border:2px solid #eb3c25
-}
-
-.btn.active {
-  border-color: #93c5fd;
-  background: #414141;
-  color: white;
-}
-
+/* ─── Repo meta ──────────────────────────────────────────────── */
 .repoMeta {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   align-items: center;
   font-size: 12px;
-  color: var(--muted)
+  color: var(--muted);
+  margin-top: auto;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════════════ */
+
+/* ─── Tablet (≤ 950px) ───────────────────────────────────────── */
+@media (max-width: 950px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ─── Tablet pequeña (≤ 768px) ──────────────────────────────── */
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  /* El nav ocupa todo el ancho, centrado */
+  #social {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .experience {
+    padding: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+  }
+
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile img {
+    height: 220px;
+    width: 100%;
+    max-height: none;
+  }
+}
+
+/* ─── Móvil (≤ 600px) ────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .container {
+    padding: 14px 12px 40px;
+  }
+
+  .section {
+    padding: 16px;
+  }
+
+  /* --- Menú hamburguesa --- */
+
+  /* Ocultar los botones de red social, mostrar hamburguesa */
+  #social a:not(.icon) {
+    display: none;
+  }
+
+  #social .icon {
+    display: block;
+    margin-left: auto; /* empuja el ícono a la derecha */
+  }
+
+  /* Menú desplegado: clase "responsive" añadida por JS */
+  #social.responsive {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    background: #1c1e28;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  #social.responsive a:not(.icon) {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  #social.responsive .icon {
+    /* El ícono queda al final visualmente, lo reordenamos */
+    order: -1;
+    margin-left: auto;
+    width: auto;
+  }
+
+  /* Cards a una columna */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Toolbar: input y select a ancho completo */
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input,
+  .select {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .toolbar .btn {
+    width: 100%;
+    text-align: center;
+  }
 }

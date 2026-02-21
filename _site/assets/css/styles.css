@@ -227,3 +227,43 @@ body {
   font-size: 12px;
   color: var(--muted)
 }
+
+/* Para hacer la web responsive */
+#social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#social .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  #social a:not(.icon) {
+    display: none;
+  }
+  #social a.icon {
+    display: block;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #social.responsive {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #social.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #social.responsive a {
+    display: block;
+    float: none;
+    text-align: left;
+  }
+}

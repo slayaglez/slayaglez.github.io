@@ -14,10 +14,11 @@
       <h1 class="title">Sebastián Laya González</h1>
       <div class="subtitle">Estudiante de Desarrollo de Aplicaciones Multiplataforma (1º DAM)</div>
     </div>
-    <nav style="display:flex;gap:10px">
+    <nav id="social">
       <a id="linkedin" class="btn" href="https://www.linkedin.com/in/slayaglez/" target="_blank">LinkedIn</a>
       <a id="github" class="btn" href="https://github.com/slayaglez" target="_blank">GitHub</a>
       <a id="email" class="btn" href="mailto:slayaglez@gmail.com">Email</a>
+      <a href="javascript:void(0);" class="btn icon" onclick="responsiveMenu()">&#9776;</a>
     </nav>
   </header>
 
@@ -207,6 +208,15 @@
     document.getElementById("repos").innerHTML = `<div class="muted">${err.message}</div>`;
     console.error(err);
   });
+
+  function responsiveMenu() {
+  var x = document.getElementById("social");
+  if (!x.classList.contains("responsive")) {
+    x.classList.add("responsive");
+  } else {
+    x.classList.remove("responsive");
+  }
+}
 </script>
 
 </body>
