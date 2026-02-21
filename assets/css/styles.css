@@ -155,20 +155,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-
-
-.card.border-blue {
-  border-color: #ff1e1e8a
-}
-
-.card.border-violet {
-  border-color: #ff1e1e8a
-}
-
-.card.border-emerald {
-  border-color: #ff1e1e8a
+  border-color: #ff1e1e8a;
 }
 
 .muted {
@@ -218,7 +205,7 @@ body {
 }
 
 #github:hover {
-  border:2px solid #b4b4b4
+  border:2px solid #481f94
 }
 
 #email:hover {

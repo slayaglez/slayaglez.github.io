@@ -155,21 +155,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border-color: #ff1e1e8a;
 }
 
-
-
-.card.border-blue {
-  border-color: #ff1e1e8a
-}
-
-.card.border-violet {
-  border-color: #ff1e1e8a
-}
-
-.card.border-emerald {
-  border-color: #ff1e1e8a
-}
 
 .muted {
   color: var(--muted)
