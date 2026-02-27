@@ -1,230 +1,277 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-  <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>slayaglez | CV & Repos</title>
-  <meta name="description" content="CV de Sebastián Laya González y repositorios destacados en GitHub." />
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <title>slayaglez</title>
+  <meta name="description" content="Desarrollador de Aplicaciones Multiplataforma — Sebastián Laya González" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
-<body>
-  <div class="container">
-  <header class="topbar">
-    <div>
-      <h1 class="title">Sebastián Laya González</h1>
-      <div class="subtitle">Estudiante de Desarrollo de Aplicaciones Multiplataforma (1º DAM)</div>
-    </div>
-    <nav id="social">
-      <a id="linkedin" class="btn" href="https://www.linkedin.com/in/slayaglez/" target="_blank">LinkedIn</a>
-      <a id="github" class="btn" href="https://github.com/slayaglez" target="_blank">GitHub</a>
-      <a id="email" class="btn" href="mailto:slayaglez@gmail.com">Email</a>
-      <a href="javascript:void(0);" class="btn icon" onclick="responsiveMenu()">&#9776;</a>
-    </nav>
-  </header>
 
-  <section class="section">
-    <h2>Sobre mí</h2>
-    <div class="grid2">
-      <div class="profile">
-        <img src="assets/img/perfil.jpg" alt="Foto de perfil">
-        <div class="bio">
-          <p class="muted" style="margin:0">
-            ¡Hola! Tengo 22 años y soy desarrollador de aplicaciones multiplataforma en formación. 
-          </p>
-          <br>
-          <p class="muted" style="margin:0">
-            Estudié un Grado en Ingeniería Informática durante dos años en la Universidad de La Laguna y decidí migrar al Ciclo Superior que estoy cursando actualmente en el IES Puerto de la Cruz.
-          </p>
-          <br>
-          <p class="muted" style="margin:0">
-            Por último cuento con el nivel C1 de inglés y el A2 de alemán.
-          </p>
-          <div class="pillrow">
+<body>
+
+  <!-- ══ NAV STICKY  ══════════════════ -->
+  <nav class="nav-sticky" id="nav-sticky">
+    <span class="nav-sticky-name"><em>slaya</em>glez</span>
+    <a class="btn-social" href="https://www.linkedin.com/in/slayaglez/" target="_blank">LinkedIn</a>
+    <a class="btn-social" href="https://github.com/slayaglez" target="_blank">GitHub</a>
+    <a class="btn-social" href="mailto:slayaglez@gmail.com">Email</a>
+  </nav>
+
+  <div class="page">
+
+    <!-- ══ HERO ═════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-name">
+        <div class="hero-index">01 — Desarrollador</div>
+        <h1>Sebastián<br><em>Laya</em> González<span class="cursor"></span></h1>
+        <p class="hero-sub">
+          Estudiante de Desarrollo de Aplicaciones Multiplataforma (1º DAM)<br>
+          IES Puerto de la Cruz — Buscando prácticas en backend
+        </p>
+      </div>
+
+      <!-- Botones sociales en el hero -->
+      <nav class="hero-social" id="social">
+        <a class="btn-social" href="https://www.linkedin.com/in/slayaglez/" target="_blank">LinkedIn</a>
+        <a class="btn-social" href="https://github.com/slayaglez" target="_blank">GitHub</a>
+        <a class="btn-social" href="mailto:slayaglez@gmail.com">Email</a>
+        <a class="btn-social icon" href="javascript:void(0);" onclick="responsiveMenu()" aria-label="Menú">&#9776;</a>
+      </nav>
+
+      <div class="hero-line"></div>
+    </section>
+
+    <!-- ══ SKILLS ════════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="section-label reveal-left">
+        <span>02 — Stack técnico</span>
+      </div>
+
+      <div class="skills-grid reveal">
+        <div class="skills-photo">
+          <img src="assets/img/perfil.jpg" alt="Sebastián Laya González" />
+        </div>
+
+        <div class="skills-main">
+          <h2>Lo que<br>sé <em>hacer</em></h2>
+          <div class="pill-grid">
             <span class="pill">Java</span>
+<<<<<<< HEAD
             <span class="pill">HTML/CSS</span>
+=======
+            <span class="pill">SQL</span>
+            <span class="pill">HTML / CSS</span>
+>>>>>>> 035e178 (total rework)
             <span class="pill">JavaScript</span>
             <span class="pill">Git</span>
             <span class="pill">Assembly</span>
-            <span class="pill">C/C++</span>
+            <span class="pill">C / C++</span>
             <span class="pill">PostgreSQL</span>
           </div>
         </div>
+
+        <div class="skills-side">
+          <div class="skills-side-block">
+            <h3>En progreso</h3>
+            <ul>
+              <li>App de Notas — CRUD + BBDD</li>
+              <li>Gestor de tareas — POO + tests</li>
+            </ul>
+          </div>
+          <div class="skills-side-block">
+            <h3>Objetivo</h3>
+            <p>Backend en Java o C++. Bases de datos con Docker, MySQL, PostgreSQL o Neo4J.</p>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <!-- ══ REPOS ═════════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="section-label reveal-left">
+        <span>03 — Repositorios</span>
       </div>
 
-      <div class="experience">
-        <h3 style="margin:0 0 10px">Próximos proyectos</h3>
-        <ul class="muted" style="margin:0;padding-left:18px">
-          <li>Proyecto DAM: “App de Notas” (CRUD + BBDD)</li>
-          <li>Proyecto Java: “Gestor de tareas” (POO + tests)</li>
-        </ul>
-
-        <h3 style="margin:16px 0 10px">Objetivos</h3>
-        <p class="muted" style="margin:0">
-          Busco <b>prácticas</b> para ampliar mis conocimientos como backend en Java o C++ y para mejorar mi manejo de bases de datos usando herramientas como Docker, MySQL, PostgreSQL o Neo4J entre otras.
-        </p>
+      <div class="repos-header reveal">
+        <h2>Trabajo<br><em>público</em></h2>
       </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <h2>Proyectos destacados</h2>
-    <div id="featured" class="cards"></div>
-  </section>
+      <div class="toolbar reveal">
+        <input id="q" class="input" placeholder="buscar..." />
+        <select id="sort" class="select">
+          <option value="updated">Recientes</option>
+          <option value="stars">Estrellas</option>
+          <option value="name">A-Z</option>
+        </select>
+        <button class="btn-filter active" data-topic="all">todos</button>
+        <button class="btn-filter" data-topic="showcase">destacados</button>
+        <button class="btn-filter" data-topic="web">frontend</button>
+        <button class="btn-filter" data-topic="backend">backend</button>
+      </div>
 
-  <section class="section">
-    <h2>Mis repositorios</h2>
-    <div class="toolbar">
-      <input id="q" class="input" placeholder="Buscar repositorios..." />
-      <select id="sort" class="select">
-        <option value="updated">Actividad reciente</option>
-        <option value="stars">Más estrellas</option>
-        <option value="name">A-Z</option>
-      </select>
-      <button class="btn active" data-topic="all">todos</button>
-      <button class="btn" data-topic="showcase">showcase</button>
-      <button class="btn" data-topic="web">web</button>
-      <button class="btn" data-topic="backend">backend</button>
-    </div>
+      <div id="repos" class="cards"></div>
+    </section>
 
-    <div style="height:12px"></div>
-    <div id="repos" class="cards"></div>
-  </section>
-</div>
+    <!-- ══ FOOTER ════════════════════════════════════════════════ -->
+    <footer class="footer reveal">
+      <p>Sebastián Laya González — <span>2026</span></p>
+      <p>slayaglez@gmail.com</p>
+      <p>Hecho con HTML, CSS &amp; JS</p>
+    </footer>
 
-<script>
-  const GITHUB_USERNAME = "slayaglez";
-  const FEATURED_TOPIC = "showcase";
-  let allRepos = [];
-  let activeTopic = "all";
+  </div><!-- /.page -->
 
-  function formatDate(iso){
-    const d = new Date(iso);
-    return d.toLocaleDateString("es-ES", {year:"numeric", month:"short", day:"2-digit"});
-  }
-  function cardBorderByIndex(i){
-    return ["border-blue","border-violet","border-emerald"][i % 3];
-  }
+  <script>
+    /* ── GitHub API ──────────────────────────────────────────── */
+    const GITHUB_USERNAME = "slayaglez";
+    let allRepos = [];
+    let activeTopic = "all";
 
-  async function fetchRepos(){
-    const url = `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`;
-    const res = await fetch(url, { headers: { "Accept":"application/vnd.github+json" }});
-    if(!res.ok) throw new Error("No se pudo leer la API de GitHub. Revisa tu usuario.");
-    const repos = await res.json();
-    return repos.map(r => ({
-      name: r.name,
-      html_url: r.html_url,
-      description: r.description || "",
-      language: r.language || "—",
-      stargazers_count: r.stargazers_count || 0,
-      updated_at: r.updated_at,
-      topics: r.topics || []
-    }));
-  }
+    function formatDate(iso) {
+      return new Date(iso).toLocaleDateString("es-ES", { year: "numeric", month: "short" });
+    }
 
-  function renderFeatured(repos){
-    const featured = repos.filter(r => r.topics.includes(FEATURED_TOPIC)).slice(0, 6);
-    const el = document.getElementById("featured");
-    el.innerHTML = featured.length ? "" : `<div class="muted">Aún no tienes repos con topic <b>${FEATURED_TOPIC}</b>.</div>`;
+    async function fetchRepos() {
+      const res = await fetch(
+        `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`,
+        { headers: { "Accept": "application/vnd.github+json" } }
+      );
+      if (!res.ok) throw new Error("No se pudo conectar con GitHub.");
+      return (await res.json()).map(r => ({
+        name: r.name,
+        html_url: r.html_url,
+        description: r.description || "",
+        language: r.language || "—",
+        stargazers_count: r.stargazers_count || 0,
+        updated_at: r.updated_at,
+        topics: r.topics || [],
+        featured: (r.topics || []).includes("showcase")
+      }));
+    }
 
-    featured.forEach((r, i) => {
-      const topics = r.topics.slice(0, 4).map(t => `<span class="pill">${t}</span>`).join("");
-      el.insertAdjacentHTML("beforeend", `
-        <article class="card ${cardBorderByIndex(i)}">
-          <h3>${r.name}</h3>
-          <div class="muted">${r.description || "Sin descripción (añádela en GitHub 😉)"}</div>
-          <div class="pillrow">
-            <span class="pill featured">Destacado</span>
-            ${topics}
-          </div>
-          <div class="repoMeta">
-            <span>⭐ ${r.stargazers_count}</span>
-            <span>🧩 ${r.language}</span>
-            <span>🕒 ${formatDate(r.updated_at)}</span>
-          </div>
-          <a class="btn" href="${r.html_url}" target="_blank" rel="noreferrer">Ver repo</a>
-        </article>
-      `);
-    });
-  }
+    function applyFilters(repos) {
+      const q = (document.getElementById("q").value || "").toLowerCase();
+      const sort = document.getElementById("sort").value;
 
-  function applyFilters(repos){
-    const q = (document.getElementById("q").value || "").toLowerCase();
-    const sort = document.getElementById("sort").value;
-
-    let out = repos.filter(r => {
-      const matchesText = r.name.toLowerCase().includes(q) || (r.description||"").toLowerCase().includes(q);
-      const matchesTopic = activeTopic === "all" ? true : r.topics.includes(activeTopic);
-      return matchesText && matchesTopic;
-    });
-
-    if (sort === "updated") out.sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at));
-    if (sort === "stars") out.sort((a,b) => (b.stargazers_count||0) - (a.stargazers_count||0));
-    if (sort === "name") out.sort((a,b) => a.name.localeCompare(b.name));
-    return out;
-  }
-
-  function renderRepos(repos){
-    const el = document.getElementById("repos");
-    const list = applyFilters(repos);
-    el.innerHTML = list.length ? "" : `<div class="muted">No hay resultados con esos filtros.</div>`;
-
-    list.forEach((r, i) => {
-      const topics = (r.topics && r.topics.length)
-        ? r.topics.slice(0, 6).map(t => `<span class="pill">${t}</span>`).join("")
-        : `<span class="pill">sin topics</span>`;
-
-      el.insertAdjacentHTML("beforeend", `
-        <article class="card ${cardBorderByIndex(i)}">
-          <h3>${r.name}</h3>
-          <div class="muted">${r.description || "Sin descripción"}</div>
-          <div class="pillrow">${topics}</div>
-          <div class="repoMeta">
-            <span>⭐ ${r.stargazers_count}</span>
-            <span>🧩 ${r.language}</span>
-            <span>🕒 ${formatDate(r.updated_at)}</span>
-          </div>
-          <a class="btn" href="${r.html_url}" target="_blank" rel="noreferrer">Abrir</a>
-        </article>
-      `);
-    });
-  }
-
-  function bindUI(){
-    document.getElementById("q").addEventListener("input", () => renderRepos(allRepos));
-    document.getElementById("sort").addEventListener("change", () => renderRepos(allRepos));
-    document.querySelectorAll(".btn[data-topic]").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".btn[data-topic]").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        activeTopic = btn.dataset.topic;
-        renderRepos(allRepos);
+      let out = repos.filter(r => {
+        const matchText = r.name.toLowerCase().includes(q) || r.description.toLowerCase().includes(q);
+        const isHidden = r.topics.includes("hidden");
+        const matchTopic = activeTopic === "all" || r.topics.includes(activeTopic);
+        return matchText && matchTopic && !isHidden;
       });
+
+      if (sort === "updated") out.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+      if (sort === "stars") out.sort((a, b) => b.stargazers_count - a.stargazers_count);
+      if (sort === "name") out.sort((a, b) => a.name.localeCompare(b.name));
+      return out;
+    }
+
+    function renderRepos(repos) {
+      const el = document.getElementById("repos");
+      const list = applyFilters(repos);
+
+      if (!list.length) {
+        el.innerHTML = `<div class="empty">No hay resultados para esa búsqueda.</div>`;
+        return;
+      }
+
+      el.innerHTML = "";
+      list.forEach(r => {
+        const topics = r.topics.length
+          ? r.topics.slice(0, 5).map(t => `<span class="topic">${t}</span>`).join("")
+          : `<span class="topic">sin topics</span>`;
+
+        el.insertAdjacentHTML("beforeend", `
+          <article class="card">
+            <h3>${r.name}</h3>
+            ${r.featured ? `<span class="pill-featured">destacado</span>` : ""}
+            <p class="card-desc">${r.description || "Sin descripción."}</p>
+            <div class="card-topics">${topics}</div>
+            <div class="card-meta">
+              <span>⭐ ${r.stargazers_count}</span>
+              <span>${r.language}</span>
+              <span>${formatDate(r.updated_at)}</span>
+            </div>
+            <a class="card-link" href="${r.html_url}" target="_blank" rel="noreferrer">Abrir</a>
+          </article>`);
+      });
+    }
+
+    function bindUI() {
+      document.getElementById("q").addEventListener("input", () => renderRepos(allRepos));
+      document.getElementById("sort").addEventListener("change", () => renderRepos(allRepos));
+      document.querySelectorAll(".btn-filter").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".btn-filter").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          activeTopic = btn.dataset.topic;
+          renderRepos(allRepos);
+        });
+      });
+    }
+
+    async function main() {
+      bindUI();
+      try {
+        allRepos = await fetchRepos();
+        renderRepos(allRepos);
+      } catch (err) {
+        document.getElementById("repos").innerHTML = `<div class="empty">${err.message}</div>`;
+      }
+    }
+
+    main();
+
+    /* ── Menu hamburguesa ────────────────────────────────────── */
+    function responsiveMenu() {
+      document.getElementById("social").classList.toggle("responsive");
+    }
+
+    document.addEventListener("click", e => {
+      const nav = document.getElementById("social");
+      if (nav.classList.contains("responsive") && !nav.contains(e.target)) {
+        nav.classList.remove("responsive");
+      }
     });
-  }
 
-  async function main(){
-    bindUI();
-    allRepos = await fetchRepos();
-    renderFeatured(allRepos);
-    renderRepos(allRepos);
-  }
+    /* ── Nav sticky — aparece al salir del hero ──────────────── */
+    const stickyNav = document.getElementById("nav-sticky");
+    const heroEl = document.getElementById("hero");
 
-  main().catch(err => {
-    document.getElementById("featured").innerHTML = `<div class="muted">${err.message}</div>`;
-    document.getElementById("repos").innerHTML = `<div class="muted">${err.message}</div>`;
-    console.error(err);
-  });
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          stickyNav.classList.add("visible");
+        } else {
+          stickyNav.classList.remove("visible");
+        }
+      });
+    }, { threshold: 0.1 });
 
-  function responsiveMenu() {
-  var x = document.getElementById("social");
-  if (!x.classList.contains("responsive")) {
-    x.classList.add("responsive");
-  } else {
-    x.classList.remove("responsive");
-  }
-}
-</script>
+    heroObserver.observe(heroEl);
 
+    /* ── Scroll reveal ───────────────────────────────────────── */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal, .reveal-left").forEach(el => revealObserver.observe(el));
+  </script>
 </body>
+
 </html>
