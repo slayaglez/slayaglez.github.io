@@ -170,7 +170,7 @@ body::before {
 /* Nombre pequeño en la nav sticky */
 .nav-sticky-name {
   font-family: var(--serif);
-  font-size: 15px;
+  font-size: 35px;
   color: var(--white);
   margin-right: auto;
   letter-spacing: -0.3px;
